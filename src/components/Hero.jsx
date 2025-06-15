@@ -67,11 +67,12 @@ const Hero = () => {
         </p>
 
         <div className="button-container">
-          <a href="/resume.pdf" download className="glow-button">
-            <span>Download Resume</span>
-            <div className="glow"></div>
-          </a>
-        </div>
+  <a href="/Raja_MernStack_resume.pdf" download className="glow-button">
+    <span>Download Resume</span>
+    <div className="glow"></div>
+  </a>
+</div>
+
 
         <div className="social-icons">
           <a href="https://github.com" target="_blank" rel="noreferrer">
