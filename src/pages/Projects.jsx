@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: 'Portfolio Website',
-    description: 'A personal portfolio website with modern UI/UX design.',
+    description: 'Built a modern, responsive resort site with WhatsApp & call integration for direct bookings. Optimized for mobile and smooth user experience.',
     imageUrl: p1,
     liveLink: 'https://your-portfolio.vercel.app/',
     githubLink: 'https://github.com/your-username/portfolio-site'
