@@ -1,98 +1,63 @@
-import React, { useEffect, useRef } from "react";
-import { ReactTyped } from "react-typed";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
-import profileImage from "../assets/profile.jpg";
-
+import React from "react";
+import { motion } from "framer-motion";
 import "./Hero.css";
 
 const Hero = () => {
-  const fireRingRef = useRef(null);
-
-  useEffect(() => {
-    const fireRing = fireRingRef.current;
-    if (!fireRing) return;
-
-    fireRing.innerHTML = "";
-    for (let i = 0; i < 24; i++) {
-      const particle = document.createElement("div");
-      particle.className = "fire-particle";
-      particle.style.setProperty("--i", i);
-      fireRing.appendChild(particle);
-    }
-
-    return () => (fireRing.innerHTML = "");
-  }, []);
-
   return (
-    <div className="home-container">
-      <div className="background-gradient"></div>
+    <section id="home" className="hero">
+      {/* Animated gradient background */}
+      <div className="hero-bg"></div>
 
-      <div className="home-content">
-        <div className="profile-container">
-          <div className="fire-ring" ref={fireRingRef}></div>
-          <div className="profile-glow"></div>
-        <img 
-  src={profileImage}
-  alt="Mohammed Raza"
-  className="profile-img"
-/>
+      <motion.div
+        className="hero-content"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1
+          className="hero-title"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          Empowering <span>Brands</span> with Digital Growth.
+        </motion.h1>
 
-        </div>
+        <motion.p
+          className="hero-subtext"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          We design and build high-performance websites, web apps, and digital
+          systems that help businesses grow, scale, and succeed online.
+        </motion.p>
 
-        <h1>
-          Hi, I'm <span className="highlight">Mohammed Raza</span>
-        </h1>
+        <motion.div
+          className="hero-buttons"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
+         <a
+  href="https://wa.me/919038459931?text=Hi%20Raja!%20I%20just%20visited%20your%20portfolio%20and%20want%20to%20discuss%20a%20project."
+  target="_blank"
+  rel="noreferrer"
+  className="btn-primary"
+>
+  Let’s Talk 💬
+</a>
 
-        <div className="typed-container">
-<ReactTyped
-  strings={[
-    "MERN Stack Developer",
-    "Full Stack Engineer",
-    "React Specialist",
-    "Node.js Backend Developer",
-    "Freelancer",
-  ]}
-  typeSpeed={40}
-  backSpeed={30}
-  loop
-  className="typed-text"
-/>
-
-        </div>
-
-        <p className="tagline">
-          I build <span className="highlight">responsive</span>,
-          <span className="highlight"> modern</span>, and
-          <span className="highlight"> scalable</span> web applications.
-        </p>
-
-        <div className="button-container">
-  <a href="/Raja_MernStack_resume.pdf" download className="glow-button">
-    <span>Download Resume</span>
-    <div className="glow"></div>
-  </a>
-</div>
-
-
-        <div className="social-icons">
-          <a href="https://github.com" target="_blank" rel="noreferrer">
-            <FaGithub />
+          <a href="#projects" className="btn-secondary">
+            View Work
           </a>
-          <a href="https://www.linkedin.com/in/md-ahmad-raja/
-" target="_blank" rel="noreferrer">
-            <FaLinkedin />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <FaTwitter />
-          </a>
-          <a href="https://www.instagram.com/rscop_official
-" target="_blank" rel="noreferrer">
-            <FaInstagram />
-          </a>
-        </div>
+        </motion.div>
+      </motion.div>
 
-      </div>
-    </div>
+      {/* Subtle animated shapes (for premium look) */}
+      <div className="floating-circle"></div>
+      <div className="floating-ring"></div>
+    </section>
   );
 };
 

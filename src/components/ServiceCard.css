@@ -1,162 +1,213 @@
-/* Global Section Styling */
 .services-page {
-  padding: 60px 20px;
-  background-color: #0A192F;
-  color: #fff;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-/* Section Titles */
-.section-title {
+  padding: 6rem 8% 5rem;
+  background: radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.15), transparent 50%),
+              linear-gradient(180deg, #111827 0%, #1e293b 100%);
+  color: var(--color-text-light);
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: #0FA4AF;
+  position: relative;
 }
 
-/* ----------- Plans Section ----------- */
+
+/* === Section Titles === */
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title span {
+  background: var(--gradient-primary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Plans === */
 .plans-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 2rem;
+  justify-items: stretch;      /* ✅ cards stretch equally */
+  align-items: stretch;        /* ✅ make all cards same height */
 }
 
 .plan-card {
-  background-color: #112240;
-  border-radius: 16px;
-  padding: 25px;
-  border: 2px solid #0FA4AF;
-  box-shadow: 0 4px 20px rgba(15, 164, 175, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2.2rem 1.8rem;
+  text-align: left;
   position: relative;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  display: flex;               /* ✅ uniform height layout */
+  flex-direction: column;      /* so content stacks vertically */
+  justify-content: space-between; /* evenly distribute content */
+  height: 100%;                /* ✅ force equal height */
 }
 
 .plan-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 30px rgba(15, 164, 175, 0.3);
+  transform: translateY(-6px);
+  border-color: var(--color-accent-blue);
+  box-shadow: 0 10px 28px rgba(59, 130, 246, 0.25);
 }
 
-.plan-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-  color: #fff;
-}
-
-.price {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #ff4b2b;
-  margin-bottom: 10px;
-}
-
-.tagline {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 20px;
-}
-
-.plan-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.plan-card ul li {
-  margin-bottom: 10px;
-  padding-left: 20px;
-  position: relative;
-}
-
-.plan-card ul li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: #0FA4AF;
-  font-weight: bold;
+.popular {
+  background: linear-gradient(160deg, #1e3a8a, #3b82f6, #9333ea);
 }
 
 .popular-tag {
   position: absolute;
-  top: -12px;
-  right: -12px;
-  background-color: #ff4b2b;
-  color: #fff;
-  padding: 6px 12px;
+  top: 12px;
+  right: 12px;
+  background: var(--color-accent-blue);
+  color: white;
   font-size: 0.8rem;
-  font-weight: bold;
-  border-radius: 50px;
-  box-shadow: 0 2px 8px rgba(255, 75, 43, 0.5);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
-/* ----------- FAQ Section ----------- */
+.plan-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent-cyan);
+  margin-bottom: 0.3rem;
+}
+
+.tagline {
+  color: var(--color-text-dim);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Features */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.feature-list .icon {
+  color: var(--color-accent-cyan);
+  font-size: 0.9rem;
+}
+
+/* Plan Button */
+.plan-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background: var(--color-accent-blue);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.plan-button:hover {
+  background: #2563eb;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+}
+
+/* === FAQ Section === */
+.faq-section {
+  margin-top: 6rem;
+}
+
 .faq-container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
-  padding-top: 30px;
+  text-align: left;
 }
 
 .faq-item {
-  background-color: #0A192F;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  padding: 18px 20px;
-  border: 1px solid #233554;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 0;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s;
 }
 
 .faq-item:hover {
-  background-color: #0A192F;
+  color: var(--color-accent-cyan);
 }
 
 .faq-question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.05rem;
-  font-weight: bold;
+}
+
+.faq-question h4 {
+  margin: 0;
+  font-size: 1rem;
 }
 
 .faq-answer {
-  margin-top: 10px;
-  color: #ddd;
+  padding-top: 0.5rem;
+  color: var(--color-text-dim);
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* ----------- CTA Section ----------- */
+/* === CTA === */
 .cta-section {
-  text-align: center;
-  padding: 60px 20px 20px;
+  margin-top: 6rem;
 }
 
-.cta-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #0FA4AF;
-}
-
-.cta-section p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 25px;
-}
-
-.glow-button {
+/* ==== New Glow Button (overrides global one) ==== */
+.services-page .glow-button {
   display: inline-block;
-  padding: 12px 28px;
+  margin-top: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #14b8a6, #3b82f6, #9333ea);
+  background-size: 200%;
+  background-position: left;
   color: #fff;
-  background: linear-gradient(135deg, #64FFDA 0%, #0F766E 100%);
-  border: none;
-  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 1rem;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  box-shadow: 0 0 8px rgba(255, 65, 108, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.4);
 }
 
-.glow-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 18px rgba(255, 75, 43, 0.8);
+.services-page .glow-button:hover {
+  background-position: right;
+  box-shadow: 0 0 25px rgba(147, 51, 234, 0.6);
+  transform: translateY(-2px);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .plans-container {
+    gap: 1.5rem;
+  }
+  .plan-card {
+    padding: 1.8rem 1.4rem;
+  }
 }
