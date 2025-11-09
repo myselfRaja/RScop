@@ -1,3 +1,7 @@
+* {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
 html, body {
   overflow-x: hidden;
   width: 100%;
