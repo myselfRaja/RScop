@@ -12,6 +12,7 @@ import Services from "./pages/Services";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
 import InvoiceForm from "./components/Invoice";
+import Terms from "./pages/Terms";
 
 // ✅ Blog imports
 import BlogList from "./pages/Blog/BlogList";
@@ -31,6 +32,8 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
+
           <Route path="/invoice" element={<InvoiceForm />} />
 
           {/* ✅ Blog Routes */}

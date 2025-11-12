@@ -8,6 +8,7 @@ import {
   FaPhoneAlt,
   FaInstagram,
 } from "react-icons/fa";
+import { Link } from "react-router-dom"; // ✅ Import Link for routing
 
 const Footer = () => {
   return (
@@ -73,6 +74,10 @@ const Footer = () => {
             <li>
               <a href="#contact">Contact</a>
             </li>
+            {/* ✅ Added Terms link here too */}
+            <li>
+              <Link to="/terms">Terms & Conditions</Link>
+            </li>
           </ul>
         </div>
 
@@ -100,6 +105,13 @@ const Footer = () => {
         <p>
           © {new Date().getFullYear()} <span>Ahmad Raja</span>. Crafted with ❤️ by{" "}
           <strong>Onligro.com</strong>.
+        </p>
+
+        {/* ✅ Added Legal Links below copyright */}
+        <p style={{ marginTop: "0.5rem" }}>
+          <Link to="/terms" style={{ color: "var(--gold)", textDecoration: "none" }}>
+            Terms & Conditions
+          </Link>
         </p>
       </div>
     </footer>
