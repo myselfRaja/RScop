@@ -94,7 +94,7 @@ const Terms = () => {
         </p>
 
         <p style={{ marginTop: "2rem", textAlign: "center", color: "#aaa" }}>
-          © {new Date().getFullYear()} Onligro Studio | Created by Mohammed Raza
+          © {new Date().getFullYear()} Onligro | Created by Ahmad Raja
         </p>
       </div>
     </section>
