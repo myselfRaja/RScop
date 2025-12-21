@@ -19,10 +19,12 @@ const About = () => {
         </h2>
 
         <p className="about-text">
-          Onligro is a modern digital studio helping brands and startups grow
-          through technology. We design and develop fast, scalable, and
-          conversion-focused websites and web applications that deliver real
-          business results.
+          Onligro is a customer-first SaaS platform built to solve one simple but
+          serious problem — <b>wasted time due to waiting</b>.
+          <br /><br />
+          We are building smart appointment and scheduling systems for salons
+          and local service businesses, so customers can book in advance and
+          arrive on time — without crowding, confusion, or long queues.
         </p>
 
         <div className="about-grid">
@@ -31,11 +33,11 @@ const About = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <h3>💻 Web Development</h3>
+            <h3>⏱️ Customer Time First</h3>
             <p>
-              From sleek portfolios to complex booking systems, we build custom
-              web solutions with modern technologies like React, Node.js, and
-              MongoDB.
+              Onligro is designed for people who value their time — students,
+              working professionals, and anyone who doesn’t want to waste
+              30–60 minutes waiting at a salon.
             </p>
           </motion.div>
 
@@ -44,10 +46,11 @@ const About = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <h3>🎨 Design & Branding</h3>
+            <h3>📅 Smart Appointments</h3>
             <p>
-              We create interfaces that look beautiful and perform beautifully.
-              Every design is crafted to make your brand stand out online.
+              We help local salons move from walk-in chaos to time-based
+              appointments, giving owners better control and customers a
+              predictable, stress-free experience.
             </p>
           </motion.div>
 
@@ -56,13 +59,20 @@ const About = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <h3>🚀 Growth & Strategy</h3>
+            <h3>🌱 Built for Local Businesses</h3>
             <p>
-              Our goal isn’t just to build — it’s to help you grow. We combine
-              design, technology, and marketing to boost your business impact.
+              Onligro is built ground-up for real local salons — simple to use,
+              affordable, and focused on daily operational problems instead of
+              unnecessary complexity.
             </p>
           </motion.div>
         </div>
+
+        <p className="about-text" style={{ marginTop: "2rem", fontSize: "0.95rem", opacity: 0.85 }}>
+          Founded by <b>Ahmad Raja</b> with <b>Azam Nuri</b> as Co-Founder,
+          Onligro is an ongoing effort to bring big-brand efficiency to small,
+          local businesses.
+        </p>
       </motion.div>
     </section>
   );
